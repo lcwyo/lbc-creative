@@ -3,13 +3,11 @@ services:
   nginx:
       build:
         context: .
-        dockerfile: ./nginx/Dockerfile
-      container_name: "jccoach_nginx"  
+        dockerfile: ./Dockerfile
+      container_name: "lbc-creative"  
       restart: always
-      volumes:
-      - ./src:/var/www/html
+#      volumes:
+#      - ./src:/var/www/html
       ports:
         - "80:80"
         - "443:443"
-#      links:
-#        - php-fpm
